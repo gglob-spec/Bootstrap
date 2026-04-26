@@ -1,0 +1,112 @@
+:root {
+    --primary-green: #2d7a44;
+    --epi-yellow: #facc15;
+    --soft-bg: #f8fafc;
+    --text-dark: #0f172a;
+}
+
+/* Force layout to fit in one screen without scrolling */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.viewport-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+/* Main Content pushes Footer to the bottom */
+.hero-section {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.fw-800 { font-weight: 800; }
+.display-3 { color: var(--text-dark); line-height: 1.1; }
+
+/* Registration Card */
+.registration-card {
+    background: #fff;
+    border-radius: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.btn-register {
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #235d34;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Responsive Feature Cards */
+.features-area {
+    flex: 0.8;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.feature-card {
+    padding: 25px;
+    border-radius: 20px;
+    background: #fafafa;
+    border: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: white;
+    border-color: var(--primary-green);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+/* Bigger, Functional Icons */
+.icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #f0fdf4;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: var(--primary-green);
+}
+
+.custom-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* Footer Stay-at-bottom */
+.footer-bar {
+    background-color: var(--primary-green);
+    padding: 15px 0;
+    color: var(--epi-yellow);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    body { overflow-y: auto; }
+    .viewport-wrapper { height: auto; }
+    .display-3 { font-size: 2.5rem; }
+}
